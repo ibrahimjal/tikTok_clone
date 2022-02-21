@@ -40,7 +40,7 @@ header{
     position: relative;
     width: 100%;
     height: 100%;
-    
+    /* z-index: 1000; */
 }
 video{
     width: 100%;
@@ -51,7 +51,7 @@ video{
 
 .top-bar{
     position: absolute;
-    top: 1rem;
+    top: 0.8rem;
     left: 0;
     width: 100%;
     /* border: 1px solid red; */
@@ -63,9 +63,16 @@ video{
 
 .material-icons{
     font-size: 2rem;
-    color: var(--dark-font-color);
+    color: var(--white-color);
     cursor: pointer;
     transition: all 0.2s;
+}
+.like-btn{
+    font-size: 2rem;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
 }
 .material-icons:hover{
     color: var(--white-color);
@@ -121,7 +128,7 @@ hr{
     gap: .5rem;
 }
 .icon img{
-    width: 2.5rem;
+    width: 2.2rem;
     cursor: pointer;
 }
 .icon p{
@@ -198,7 +205,7 @@ marquee{
     cursor: pointer;
 }
 .nav-img{
-    width: 1.5rem;
+    width: 1.7rem;
 }
 .nav-item p{
     font-size: .5rem;
