@@ -12,7 +12,9 @@
     --gray-color: #41413f;
     --red-color: #ed4853;
     --white-color: #fff;
+    --white-color-opacity: hsl(0, 0%, 100%, 95%);
     --gray-text-color: #969892;
+    --gray-text-color-light: #eaece4;
 
 }
 
@@ -36,12 +38,98 @@ header{
 .wrapper::-webkit-scrollbar{
     display: none;
 }
+
+
+
 .bg-videos{
     position: relative;
     width: 100%;
     height: 100%;
     /* z-index: 1000; */
 }
+
+/* Message Container */
+.message-container{
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    min-height: 60vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--white-color-opacity);
+    z-index: 100;
+    padding: 0.8rem;
+    border-radius: 8px 8px 0 0;
+    transition: opacity 0.3s ease-in-out;
+    
+}
+.show-msg{
+    opacity: 1;
+    pointer-events: all;
+}
+.top-msg{
+    width: 100%;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+.top-msg p{
+    font-size: 12px;
+    color: var(--dark-font-color);
+}
+.msg-closeBtn{
+    position: absolute;
+    top: 0.8rem; 
+    right: 0.8rem; 
+    z-index: 101;
+    color: var(--dark-font-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.msg-body{
+   width: 100%;
+   height: 50vh;   
+   overflow: scroll;
+   background-color: yellow;
+   padding: 1rem;
+}
+.msg-body::-webkit-scrollbar{
+    display: none;
+}
+.msg-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: .5rem;
+}
+.msg-input input{
+     width: 80%;
+     margin-left: .5rem;
+     padding: .8rem .5rem;
+     font-size: 1rem;
+     outline: none;
+     border: 0;
+     border-radius: 8px;
+     background: var(--gray-text-color-light);
+}
+
+.add-comment{
+    font-size: 2rem;
+    margin-left: .5rem;
+    color: var(--red-color);
+    cursor: pointer;
+}
+.msg-styling{
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+::placeholder{
+    opacity: .5;
+    font-size: .9rem;
+}
+
+
 video{
     width: 100%;
     height: 100%;

@@ -30,3 +30,31 @@ document.getElementById("likeBtn4").addEventListener("click", function() {
     heartNum4.textContent ++
       
   });
+
+  
+// show messages
+const msgContainer1 = document.getElementById('msgContainer1')
+document.getElementById("messageBtn").addEventListener("click", ()=> {
+    msgContainer1.classList.add("show-msg")
+    document.getElementById("msgCloseBtn1").addEventListener("click",()=>{
+        msgContainer1.classList.remove("show-msg")
+
+    })
+}) 
+
+
+// add comment 
+const msgBody = document.getElementById("msgBody")
+const msgInput1 = document.getElementById("msgInput1")
+
+document.getElementById("addComment").addEventListener("click", ()=>{
+    console.log("Comment added")
+    paragraph = document.createElement("p")
+    paragraph.classList.add("msg-styling")
+    paragraph.textContent = msgInput1.value
+    msgBody.appendChild(paragraph)
+
+    msgInput1.value = ""
+
+
+})
